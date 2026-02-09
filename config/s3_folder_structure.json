@@ -1,0 +1,11 @@
+{
+  "bucket": "netflix-pipeline-khasim-2026",
+  "folders": [
+    "raw/",
+    "processed/",
+    "curated/",
+    "rejected/",
+    "scripts/",
+    "athena_results/"
+  ]
+}

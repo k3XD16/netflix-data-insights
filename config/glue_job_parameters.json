@@ -1,0 +1,24 @@
+{
+  "bronze_to_silver": {
+    "job_name": "netflix-bronze-to-silver",
+    "glue_version": "4.0",
+    "python_version": "3",
+    "worker_type": "G.1X",
+    "number_of_workers": 2,
+    "parameters": {
+      "--S3_BUCKET": "netflix-pipeline-khasim-2026"
+    }
+  },
+  "silver_to_gold": {
+    "job_name": "netflix-silver-to-gold",
+    "glue_version": "4.0",
+    "python_version": "3",
+    "worker_type": "G.1X",
+    "number_of_workers": 2,
+    "parameters": {
+      "--SILVER_S3_PATH": "s3://netflix-pipeline-khasim-2026/processed/",
+      "--GOLD_S3_PATH": "s3://netflix-pipeline-khasim-2026/curated/",
+      "--DATABASE_NAME": "netflix_processed_db"
+    }
+  }
+}
