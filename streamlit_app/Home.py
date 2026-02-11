@@ -166,17 +166,17 @@ st.code("""
 📦 BRONZE LAYER (Raw Data)
    └─ S3: raw/ → Glue Catalog: netflix_raw_db.raw
 
-         ⬇️ AWS Glue Job (PySpark)
+         ⬇️ AWS Glue Job (PySpark) Transforming Bronze → Silver
 
 📊 SILVER LAYER (Processed Data)
    └─ S3: processed/ → Glue Catalog: netflix_processed_db.netflix_silver_processed
 
-         ⬇️ Athena SQL Transformations
+         ⬇️ AWS Glue Job (PySpark) Transforming Silver → Gold
 
 🏆 GOLD LAYER (Business Analytics)
    └─ S3: curated/ → Glue Catalog: netflix_curated_db.*
    
-         ⬇️ Streamlit Dashboard (Current)
+         ⬇️ Streamlit Dashboard (Current) Querying Gold Layer via Athena
          
 📈 You are here!
 """, language="text")
